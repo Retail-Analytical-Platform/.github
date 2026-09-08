@@ -52,9 +52,9 @@ Untuk load dataset ini ke database dan latihan query beneran, jalankan PostgreSQ
 
 | Panduan | Deskripsi |
 |---|---|
-| [`Docker.md`](Docker.md) | Cara install & jalankan PostgreSQL di Docker, sampai connect dari VS Code PostgreSQL extension |
-| [`Data-Integration-Docker.md`](Data-Integration-Docker.md) | Cara load CSV di `data/` ke dalam database tersebut |
-| [`Supabase-Migration.md`](Supabase-Migration.md) | Cara pindahin data ke Supabase supaya bisa diakses online / tanpa Docker |
+| [`Docker.md`]([Docker.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Docker.md)) | Cara install & jalankan PostgreSQL di Docker, sampai connect dari VS Code PostgreSQL extension |
+| [`Data-Integration-Docker.md`]([Data-Integration-Docker.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Data-Integration-Docker.md)) | Cara load CSV di `data/` ke dalam database tersebut |
+| [`Supabase-Migration.md`]([Supabase-Migration.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Supabase-Migration.md)) | Cara pindahin data ke Supabase supaya bisa diakses online / tanpa Docker |
 
 ---
 
