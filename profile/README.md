@@ -46,7 +46,7 @@ Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari
 
 ## Setup Lokal
 
-Repo ini menyediakan **dataset retail star-schema** (`data/`) untuk latihan query dan analisis data — satu fact table + empat dimension table, lengkap dengan jawaban yang sudah diverifikasi (lihat [`data/README.md`](data/README.md)).
+Repo ini menyediakan **dataset retail star-schema** (`data/`) untuk latihan query dan analisis data — satu fact table + empat dimension table, lengkap dengan jawaban yang sudah diverifikasi (lihat [`data/README.md`](https://github.com/Retail-Analytical-Platform/.github/blob/main/data/README.md)).
 
 Untuk load dataset ini ke database dan latihan query beneran, jalankan PostgreSQL lokal lewat Docker:
 
@@ -204,29 +204,6 @@ Lihat bagian [Template Dokumentasi](#template-dokumentasi) di bawah.
 ├── Supabase-Migration.md
 └── README.md
 ```
-
----
-
-## Template Dokumentasi
-
-Setiap case study mengikuti format standar berikut ([`/templates/case-study-template.md`](templates/case-study-template.md)):
-
-1. Ringkasan Eksekutif
-2. Latar Belakang Perusahaan/Produk
-3. Masalah/Tantangan yang Dibahas
-4. Analisis (per perspektif)
-5. Temuan Kunci (Key Insights)
-6. Rekomendasi Strategis
-7. Referensi/Sumber Data
-
----
-
-## Ritme & Kadensa Tim
-
-- **Target output**: 1 case study per 2 minggu
-- **Retrospektif berkala** untuk mengevaluasi proses analisis dan kolaborasi tim
-
----
 
 <div align="center">
 
