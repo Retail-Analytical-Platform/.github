@@ -82,8 +82,6 @@ Setiap case study menggunakan kombinasi framework berikut agar hasilnya konsiste
 - **RICE / ICE Scoring** — memprioritaskan rekomendasi
 - **North Star Metric & AARRR (Pirate Metrics)** — sudut pandang growth/produk
 
-Detail lengkap didokumentasikan di [`/framework.md`](framework.md).
-
 ---
 
 ## Alur Kerja Case Study
