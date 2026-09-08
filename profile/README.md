@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📊 Business & Product Case Studies Team
+# Business & Product Case Studies Team
 
 **Membedah studi kasus bisnis & produk dari berbagai sudut pandang untuk menghasilkan insight yang actionable bagi keputusan produk.**
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Tentang Project Ini
+## Tentang Project Ini
 
 Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari berbagai sudut pandang — **strategi, produk, operasional, finansial, dan pengguna** — untuk menghasilkan insight yang bisa langsung dipakai dalam pengambilan keputusan produk.
 
@@ -21,7 +21,7 @@ Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari
 
 ---
 
-## 🎯 Tujuan
+## Tujuan
 
 | # | Tujuan |
 |---|--------|
@@ -32,19 +32,19 @@ Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari
 
 ---
 
-## 🗂️ Daftar Isi
+## Daftar Isi
 
-- [Setup Lokal](#-setup-lokal)
-- [Struktur Tim](#-struktur-tim)
-- [Framework Analisis](#-framework-analisis)
-- [Alur Kerja Case Study](#-alur-kerja-case-study)
-- [Struktur Folder](#-struktur-folder)
-- [Template Dokumentasi](#-template-dokumentasi)
-- [Ritme Tim](#-ritme--kadensa-tim)
+- [Setup Lokal](#setup-lokal)
+- [Struktur Tim](#struktur-tim)
+- [Framework Analisis](#framework-analisis)
+- [Alur Kerja Case Study](#alur-kerja-case-study)
+- [Struktur Folder](#struktur-folder)
+- [Template Dokumentasi](#template-dokumentasi)
+- [Ritme Tim](#ritme--kadensa-tim)
 
 ---
 
-## 💻 Setup Lokal
+## Setup Lokal
 
 Repo ini menyediakan **dataset retail star-schema** (`data/`) untuk latihan query dan analisis data — satu fact table + empat dimension table, lengkap dengan jawaban yang sudah diverifikasi (lihat [`data/README.md`](data/README.md)).
 
@@ -52,13 +52,13 @@ Untuk load dataset ini ke database dan latihan query beneran, jalankan PostgreSQ
 
 | Panduan | Deskripsi |
 |---|---|
-| [`Docker.md`]([Docker.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Docker.md)) | Cara install & jalankan PostgreSQL di Docker, sampai connect dari VS Code PostgreSQL extension |
-| [`Data-Integration-Docker.md`]([Data-Integration-Docker.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Data-Integration-Docker.md)) | Cara load CSV di `data/` ke dalam database tersebut |
-| [`Supabase-Migration.md`]([Supabase-Migration.md](https://github.com/Retail-Analytical-Platform/.github/blob/main/Supabase-Migration.md)) | Cara pindahin data ke Supabase supaya bisa diakses online / tanpa Docker |
+| [`Docker.md`](https://github.com/Retail-Analytical-Platform/.github/blob/main/Docker.md) | Cara install & jalankan PostgreSQL di Docker, sampai connect dari VS Code PostgreSQL extension |
+| [`Data-Integration-Docker.md`](https://github.com/Retail-Analytical-Platform/.github/blob/main/Data-Integration-Docker.md) | Cara load CSV di `data/` ke dalam database tersebut |
+| [`Supabase-Migration.md`](https://github.com/Retail-Analytical-Platform/.github/blob/main/Supabase-Migration.md) | Cara pindahin data ke Supabase supaya bisa diakses online / tanpa Docker |
 
 ---
 
-## 👥 Struktur Tim
+## Struktur Tim
 
 | Peran | Tanggung Jawab |
 |---|---|
@@ -68,11 +68,11 @@ Untuk load dataset ini ke database dan latihan query beneran, jalankan PostgreSQ
 | **Data/Research Support** | Mengumpulkan data pendukung, riset sekunder |
 | **Writer/Editor** | Menyusun narasi akhir agar mudah dibaca |
 
-> 💡 Untuk tim kecil, satu orang bisa merangkap beberapa peran.
+> Untuk tim kecil, satu orang bisa merangkap beberapa peran.
 
 ---
 
-## 🧩 Framework Analisis
+## Framework Analisis
 
 Setiap case study menggunakan kombinasi framework berikut agar hasilnya konsisten:
 
@@ -82,11 +82,11 @@ Setiap case study menggunakan kombinasi framework berikut agar hasilnya konsiste
 - **RICE / ICE Scoring** — memprioritaskan rekomendasi
 - **North Star Metric & AARRR (Pirate Metrics)** — sudut pandang growth/produk
 
-📄 Detail lengkap didokumentasikan di [`/framework.md`](framework.md).
+Detail lengkap didokumentasikan di [`/framework.md`](framework.md).
 
 ---
 
-## 🔄 Alur Kerja Case Study
+## Alur Kerja Case Study
 
 ```mermaid
 flowchart TD
@@ -115,13 +115,13 @@ flowchart TD
 <details>
 <summary><b>2. Susun Struktur Tim</b></summary>
 
-Lihat bagian [Struktur Tim](#-struktur-tim) di atas.
+Lihat bagian [Struktur Tim](#struktur-tim) di atas.
 </details>
 
 <details>
 <summary><b>3. Buat Framework Analisis</b></summary>
 
-Lihat bagian [Framework Analisis](#-framework-analisis) di atas.
+Lihat bagian [Framework Analisis](#framework-analisis) di atas.
 </details>
 
 <details>
@@ -161,7 +161,7 @@ Setiap case study dianalisis minimal dari 3 sudut pandang:
 <details>
 <summary><b>8. Dokumentasikan dalam Format Standar</b></summary>
 
-Lihat bagian [Template Dokumentasi](#-template-dokumentasi) di bawah.
+Lihat bagian [Template Dokumentasi](#template-dokumentasi) di bawah.
 </details>
 
 <details>
@@ -188,7 +188,7 @@ Lihat bagian [Template Dokumentasi](#-template-dokumentasi) di bawah.
 
 ---
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 .
@@ -207,7 +207,7 @@ Lihat bagian [Template Dokumentasi](#-template-dokumentasi) di bawah.
 
 ---
 
-## 📝 Template Dokumentasi
+## Template Dokumentasi
 
 Setiap case study mengikuti format standar berikut ([`/templates/case-study-template.md`](templates/case-study-template.md)):
 
@@ -221,10 +221,10 @@ Setiap case study mengikuti format standar berikut ([`/templates/case-study-temp
 
 ---
 
-## ⏱️ Ritme & Kadensa Tim
+## Ritme & Kadensa Tim
 
-- 🎯 **Target output**: 1 case study per 2 minggu
-- 🔁 **Retrospektif berkala** untuk mengevaluasi proses analisis dan kolaborasi tim
+- **Target output**: 1 case study per 2 minggu
+- **Retrospektif berkala** untuk mengevaluasi proses analisis dan kolaborasi tim
 
 ---
 
