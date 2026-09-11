@@ -1,8 +1,8 @@
 <div align="center">
 
-# Business & Product Case Studies Team
+# Retail Analytics Platform
 
-**Business and product case studies that uncover actionable insights from multiple business perspectives to support strategic product decisions.**
+**Platform analitik interaktif yang membantu pengguna memahami kinerja penjualan dan memperoleh prediksi revenue untuk mendukung pengambilan keputusan bisnis berbasis data.**
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Focus](https://img.shields.io/badge/focus-business%20%7C%20product%20%7C%20data-blue)
@@ -14,10 +14,14 @@
 
 ## Tentang Project Ini
 
-Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari berbagai sudut pandang — **strategi, produk, operasional, dan pengguna** — untuk menghasilkan insight yang bisa langsung dipakai dalam pengambilan keputusan produk.
+Tim ini fokus membedah studi kasus bisnis dan produk dari sudut pandang **strategi, produk, operasional, dan pengguna**, dengan studi kasus utama saat ini: **Retail Analytics Platform**.
 
-> Output akhir dari setiap case study idealnya bukan sekadar analisis akademis, tapi rekomendasi yang **actionable**:
-> *"Apa yang sebaiknya dilakukan tim produk berdasarkan temuan ini?"*
+> **Tujuan utama:** membangun portofolio untuk meningkatkan peluang keterima kerja.
+>
+> **Tujuan web:** menyediakan platform analitik interaktif yang membantu pengguna memahami kinerja penjualan dan memperoleh prediksi revenue untuk mendukung pengambilan keputusan bisnis berbasis data.
+
+Output akhir dari setiap case study idealnya bukan sekadar analisis akademis, tapi rekomendasi yang **actionable**:
+*"Apa yang sebaiknya dilakukan tim produk berdasarkan temuan ini?"*
 
 ---
 
@@ -34,12 +38,30 @@ Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari
 
 ## Daftar Isi
 
+- [Link Referensi](#link-referensi)
 - [Setup Lokal](#setup-lokal)
 - [Struktur Tim](#struktur-tim)
+- [Status Tugas](#status-tugas)
+- [Gambaran Website](#gambaran-website)
+- [Business Problems & Goals](#business-problems--goals)
 - [Framework Analisis](#framework-analisis)
 - [Alur Kerja Case Study](#alur-kerja-case-study)
 - [Struktur Folder](#struktur-folder)
 - [Template Dokumentasi](#template-dokumentasi)
+
+---
+
+## Link Referensi
+
+Link-link yang berguna selama pembuatan proyek:
+
+| Referensi | Link |
+|---|---|
+| Dataset | [misata.studio/datasets/retail-star-schema](https://www.misata.studio/datasets/retail-star-schema) |
+| GitHub Org | [Retail-Analytical-Platform](https://github.com/Retail-Analytical-Platform) |
+| Gambaran web (inspirasi) | [goinsight.in/demo/retail](https://www.goinsight.in/demo/retail) |
+| Referensi dashboard forecasting | [walmart-sales-forecasting-dashboard](https://github.com/acaca675/walmart-sales-forecasting-dashboard) |
+| Referensi lain | [biziinsights.com](https://www.biziinsights.com/) |
 
 ---
 
@@ -59,16 +81,180 @@ Untuk load dataset ini ke database dan latihan query beneran, jalankan PostgreSQ
 
 ## Struktur Tim
 
-| Peran | Tanggung Jawab |
-|---|---|
-| **Case Lead** | Menentukan topik, koordinasi timeline, pembagian jobdesk |
-| **Data Analyst** | Analisis model bisnis, dashboard, definisi KPI, bisnis insight & rekomendasi |
-| **Data Engineer** | Setup GitHub dan Docker, ETL pipeline, data cleaning & transformation, database |
-| **ML/Forecasting** | Feature engineering, training & tuning model, model evaluation |
-| **Frontend** | Wireframe & desain Figma, UI/UX design, implementasi frontend |
-| **Backend** | API endpoint, database connection, business logic, integrasi model ke web |
+| Posisi | Nama | Jobdesk |
+|---|---|---|
+| Data Engineer | Joseph | Setup GitHub, Docker, Supabase, PostgreSQL; query pipeline ETL; data cleaning & transformasi skala besar; data modelling (skema database) |
+| Data Analyst | Niko | EDA & business analyst, definisi KPI/metrik, query reporting untuk dashboard, dashboard Tableau (calculated fields/LOD), insight & rekomendasi bisnis, validasi data, interpretasi hasil forecast |
+| Forecast Support | Joseph + Bayu | Feature engineering, training & tuning model forecast |
+| UI/UX Frontend | Ferly | Wireframe & desain di Figma, implementasi frontend (React/Next.js) |
+| Backend | Brian | API endpoints (auth, koneksi database, fitur website umum) |
+| Backend - ML/Forecast | Bayu | FastAPI untuk serve model forecast, integrasi forecast ke web, bantu training model bersama Joseph |
+| Frontend + Deployment | Reva | Frontend React/Next.js, integrasi komponen API, responsive UI, deployment, env config |
 
 > Untuk tim kecil, satu orang bisa merangkap beberapa peran.
+
+### Rincian Jobdesk
+
+<details>
+<summary><b>Data Engineer (Joseph)</b></summary>
+
+- Data Profiling: cek kondisi data (missing value, range nilai, tipe data, duplicate)
+- Data Cleaning: membersihkan nilai null, nilai tidak valid, duplicate, format tanggal (format Indonesia: tanggal/bulan/tahun)
+- Data Transformation: ubah tipe data, standarisasi kategori (misal segmen `home office`/`homeoffice`/`homeofice` distandarisasi)
+- ETL: proses extract → transform → load ke database
+- Data modeling: bikin star schema
+- Database prep: persiapan Postgres → web
+- Dataset prep: persiapan dataset ke Data Analyst
+- Documentation
+</details>
+
+<details>
+<summary><b>Data Analyst (Niko)</b></summary>
+
+- Mencari business goals dan analisa bisnis (EDA)
+- Pembuatan model di Tableau
+- Pembuatan measure/calculated fields yang diperlukan untuk tujuan bisnis
+- Membuat dashboard scorecard overview, dashboard detail toko & produk, dashboard detail pelanggan
+- Membuat insight bisnis berdasar dashboard & rekomendasi bisnis
+- Menentukan target, tujuan bisnis, interval forecast berdasar kebutuhan data, descriptive analysis, analisa hasil dan interpretasi bisnis
+</details>
+
+<details>
+<summary><b>Forecast — Joseph (time series & feature engineering) + Bayu (modeling s.d. serving)</b></summary>
+
+- Time series analysis: analisa tren dan pola historis
+- Feature engineering: rolling average, lag, dll.
+- Modeling: bangun model awal (kandidat: XGBoost, terbuka untuk saran model lain)
+- Training
+- Hyperparameter tuning: konfigurasi sederhana
+- Model evaluation: MAE, RMSE, MAPE
+- Model selection: pilih model terbaik untuk masuk ke web (jika waktu memungkinkan, bisa dua model sebagai pembanding)
+</details>
+
+<details>
+<summary><b>Frontend (Ferly)</b></summary>
+
+- Rancangan UI/UX Figma
+- Landing page
+- Analytics page
+- Forecast page
+- What-if page (belakangan)
+- Elemen interaktif untuk memudahkan user membaca data dari grafik
+</details>
+
+<details>
+<summary><b>Frontend Integration & Deployment (Reva)</b></summary>
+
+- Review & lanjutan implementasi komponen dari desain Ferly (Next.js) — konsistensi antar halaman
+- Integrasi Tableau embed ke dalam website
+- Integrasi API ke backend (endpoint Brian & Bayu — auth, data retrieval, forecast)
+- Responsive UI di berbagai ukuran layar/device
+- Deployment website (hosting, build & release process)
+- Konfigurasi environment (env variables, API base URL, secrets management)
+</details>
+
+<details>
+<summary><b>Backend (Brian, dibantu Bayu)</b></summary>
+
+- Database connection
+- Authentication & authorization
+- API development sekaligus documentation
+- Business logic
+- Data retrieval
+</details>
+
+---
+
+## Status Tugas
+
+| Status | Keterangan |
+|---|---|
+| **Brainstorm** | Tahap paling awal, tugas masih dalam pembahasan. Untuk lanjut butuh approval dari yang lain |
+| **Not started** | Ide sudah disetujui tetapi belum mulai dikerjakan |
+| **In progress** | Ide sedang dikerjakan / dalam tahap pengembangan. Setelah selesai, lanjut ke Review |
+| **Review** | Tahap penilaian hasil penerapan. Kelanjutan bisa Done atau Starting Over |
+| **Reopen** | Hasil penerapan masih perlu dikaji ulang. Tuliskan kekurangannya di page terkait agar diperbaiki, lalu masukkan kembali ke Review |
+| **Done** | Tahap akhir |
+
+### Cara Reject Page di Tahap Review
+
+1. Masuk ke halaman Review-nya (klik tugasnya untuk masuk ke page tugas).
+2. Tuliskan kekurangan tugas tersebut pada bagian bawah page.
+3. Pindahkan status ke **Starting Over** / **Reopen** (drag di board, atau ubah status langsung di page).
+
+### Cara Menambahkan Tugas
+
+1. Klik **"+ New page"** pada bagian Brainstorm.
+2. Masuk ke page tugas, lalu lengkapi data tugas (nama tugas, penanggung jawab, dan detail jobdesk).
+
+---
+
+## Gambaran Website
+
+1. **Overview**
+   - Hero: slogan Retail Analytics Platform + gambar + tombol menuju halaman Analytics
+   - Ringkasan tren untuk total sales, total orders, total customers, dan average order value (dalam satu baris)
+   - Grafik sales tren yang lebih besar, rentang waktu 1 tahun dengan interval bulanan
+   - Kotak key insight singkat berdasarkan grafik yang ada (mis. "tren penjualan tahun ini Rp100 juta, meningkat X%")
+2. **Analytics**
+   - Embed Tableau di tengah halaman (grafik sales tren 1 tahun), dengan dropdown untuk analisa per toko, per produk, per segmen customer, dan revenue
+   - Insight bisnis yang lebih detail
+3. **Forecast**
+   - Grafik aktual vs prediksi, dengan dropdown target prediksi (revenue, customer, produk — revenue diprioritaskan) dan horizon waktu forecast
+   - Tampilan metrik akurasi: MAE, RMSE, MAPE
+   - Tabel prediksi beberapa periode ke depan (bulan – prediksi – rentang)
+   - Insight bisnis dari hasil forecast
+4. **What-if**
+   - Control panel di bagian atas untuk mengubah persentase promo (`discount_promo` di `fact_penjualan`), termasuk region dan segmen yang terdampak
+   - Grafik perbandingan skenario promo yang diubah user vs baseline
+   - Estimasi revenue & volume order, beserta persentase perbandingan terhadap baseline
+   - Insight skenario bisnis
+5. **About us**
+   - Anggota tim, jobdesk masing-masing, dan link LinkedIn
+
+---
+
+## Business Problems & Goals
+
+### Business Problems
+
+Stakeholder membutuhkan analisis revenue pada setiap toko, kategori produk, dan segmen pelanggan untuk memahami performa bisnis saat ini serta memperoleh proyeksi revenue sebagai dasar pengambilan keputusan.
+
+### Business Goals
+
+Membantu stakeholder memahami performa revenue, menemukan peluang dan masalah bisnis, memproyeksikan performa di masa mendatang, serta mengevaluasi berbagai skenario bisnis.
+
+### Business Questions
+
+- Kategori produk apa yang menghasilkan revenue terbesar di setiap wilayah?
+- Bagaimana pertumbuhan revenue dari bulan ke bulan selama 1 tahun?
+- Apakah produk premium lebih banyak terjual pada segmen Corporate atau Consumer?
+- Toko mana yang memiliki rata-rata nilai transaksi lebih tinggi dibandingkan rata-rata wilayahnya?
+- Bagaimana proyeksi revenue untuk periode mendatang?
+- Bagaimana perubahan metrik tertentu dapat memengaruhi revenue?
+
+### Business Objectives
+
+- Memantau performa revenue berdasarkan waktu, wilayah, toko, kategori produk, dan segmen pelanggan
+- Mengidentifikasi faktor yang memengaruhi performa revenue serta area yang mengalami penurunan
+- Memberikan prediksi untuk proyeksi revenue guna mendukung perencanaan bisnis
+- Mengevaluasi dampak dari berbagai perubahan/skenario terhadap revenue melalui simulasi what-if
+- Menghasilkan insight yang dapat digunakan untuk menentukan strategi peningkatan revenue
+
+### Planning
+
+**Pantau → Analisis → Prediksi → Simulasi → Tentukan Keputusan**
+
+| Tahap | Deskripsi |
+|---|---|
+| Overview | Memberikan gambaran umum mengenai kondisi dan performa bisnis |
+| Analytics | Menggali performa berdasarkan wilayah, toko, produk, dan pelanggan |
+| Forecast | Memberikan proyeksi revenue untuk membantu perencanaan ke depan |
+| What-If | Mensimulasikan berbagai skenario untuk membantu mengevaluasi alternatif keputusan |
+
+### Expected Business Outcome
+
+Stakeholder dapat memahami kondisi bisnis secara menyeluruh, mengidentifikasi area yang perlu diperbaiki dan peluang pertumbuhan, serta membuat keputusan yang lebih terukur berdasarkan data.
 
 ---
 
@@ -108,7 +294,7 @@ flowchart TD
 
 - Tentukan fokus: apakah case study bersifat industri umum, spesifik startup, atau internal perusahaan sendiri?
 - Tetapkan target audiens dari hasil case study (misalnya: tim produk, calon investor, portofolio pribadi, komunitas belajar).
-- Buat pernyataan misi singkat tim (bisa pakai deskripsi yang sudah kamu tulis sebagai starting point).
+- Buat pernyataan misi singkat tim.
 </details>
 
 <details>
@@ -212,8 +398,6 @@ Buat template case study, misalnya:
 6. Rekomendasi Strategis
 7. Referensi/Sumber Data
 ```
-
-Simpan template ini di `/templates/case-study-template.md`.
 
 <div align="center">
 
