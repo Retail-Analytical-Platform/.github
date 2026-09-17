@@ -2,115 +2,115 @@
 
 > Business and product case studies that uncover actionable insights from multiple business perspectives to support strategic product decisions.
 
-## Tentang Project Ini
+## About This Project
 
-Tim ini fokus membedah studi kasus bisnis dan produk nyata (atau hipotetis) dari berbagai sudut pandang — strategi, produk, operasional, finansial, dan pengguna — untuk menghasilkan insight yang bisa langsung dipakai dalam pengambilan keputusan produk.
+This team focuses on dissecting real (or hypothetical) business and product case studies from various perspectives — strategy, product, operations, finance, and users — to produce insights that can be directly applied to product decision-making.
 
-Output akhir dari setiap case study idealnya bukan sekadar analisis akademis, tapi rekomendasi yang actionable: "apa yang sebaiknya dilakukan tim produk berdasarkan temuan ini?"
-
----
-
-## Setup Lokal
-
-Repo ini menyediakan dataset retail star-schema (`data/`) untuk latihan query
-dan analisis data — satu fact table + empat dimension table, lengkap dengan
-jawaban yang sudah diverifikasi (lihat [`data/README.md`](data/README.md)).
-
-Untuk load dataset ini ke database dan latihan query beneran, jalankan
-PostgreSQL lokal lewat Docker:
-
-**[Docker.md](Docker.md)** — cara install & jalankan PostgreSQL di Docker,
-sampai connect dari VS Code PostgreSQL extension.
-
-**[Data-Integration-Docker.md](Data-Integration-Docker.md)** — cara load
-CSV di `data/` ke dalam database tersebut.
-
-**[Supabase-Migration.md](Supabase-Migration.md)** — cara pindahin data
-itu ke Supabase supaya bisa diakses online / tanpa Docker.
+The final output of each case study is ideally not just academic analysis, but actionable recommendations: "what should the product team do based on these findings?"
 
 ---
 
-## Tujuan
+## Local Setup
 
-- Melatih kemampuan berpikir strategis lintas fungsi (bisnis, produk, data, UX).
-- Membangun repository studi kasus yang bisa jadi referensi tim internal.
-- Menghasilkan rekomendasi konkret yang bisa diuji atau diterapkan.
-- Mengasah kemampuan storytelling data dan presentasi insight ke stakeholder.
+This repo provides a retail star-schema dataset (`data/`) for query
+and data-analysis practice — one fact table + four dimension tables, complete with
+verified answers (see [`data/README.md`](data/README.md)).
+
+To load this dataset into a database and practice real queries, run
+PostgreSQL locally via Docker:
+
+**[Docker.md](Docker.md)** — how to install & run PostgreSQL in Docker,
+up to connecting from the VS Code PostgreSQL extension.
+
+**[Data-Integration-Docker.md](Data-Integration-Docker.md)** — how to load
+the CSVs in `data/` into that database.
+
+**[Supabase-Migration.md](Supabase-Migration.md)** — how to migrate that data
+to Supabase so it can be accessed online / without Docker.
 
 ---
 
-## Langkah-Langkah Membangun Project Ini
+## Objectives
 
-### 1. Definisikan Ruang Lingkup & Tujuan Tim
-- Tentukan fokus: apakah case study bersifat industri umum, spesifik startup, atau internal perusahaan sendiri?
-- Tetapkan target audiens dari hasil case study (misalnya: tim produk, calon investor, portofolio pribadi, komunitas belajar).
-- Buat pernyataan misi singkat tim (bisa pakai deskripsi yang sudah kamu tulis sebagai starting point).
+- Train cross-functional strategic thinking (business, product, data, UX).
+- Build a repository of case studies that can serve as an internal team reference.
+- Produce concrete recommendations that can be tested or implemented.
+- Sharpen data storytelling and insight presentation skills for stakeholders.
 
-### 2. Susun Struktur Tim
-- **Case Lead** — menentukan topik, koordinasi timeline.
-- **Business Analyst** — analisis model bisnis, revenue, market positioning.
-- **Product Analyst** — analisis fitur, UX, product-market fit.
-- **Data/Research Support** — mengumpulkan data pendukung, riset sekunder.
-- **Writer/Editor** — menyusun narasi akhir agar mudah dibaca.
+---
 
-> Untuk tim kecil, satu orang bisa merangkap beberapa peran.
+## Steps to Build This Project
 
-### 3. Buat Kerangka Kerja (Framework) Analisis
-Tetapkan framework standar agar setiap case study konsisten, misalnya kombinasi dari:
-- **Business Model Canvas** — untuk memahami model bisnis secara menyeluruh.
-- **SWOT / Porter's Five Forces** — untuk analisis kompetitif dan strategis.
-- **Jobs to be Done (JTBD)** — untuk memahami motivasi pengguna.
-- **RICE / ICE Scoring** — untuk memprioritaskan rekomendasi.
-- **North Star Metric & AARRR (Pirate Metrics)** — untuk sudut pandang growth/produk.
+### 1. Define the Team's Scope & Objectives
+- Determine the focus: is the case study general industry, startup-specific, or internal to your own company?
+- Establish the target audience for the case study results (e.g., product team, prospective investors, personal portfolio, learning community).
+- Write a brief team mission statement (you can use the description you've already written as a starting point).
 
-Dokumentasikan framework ini di file terpisah (`/framework.md`) agar semua anggota tim pakai standar yang sama.
+### 2. Establish Team Structure
+- **Case Lead** — determines the topic, coordinates the timeline.
+- **Business Analyst** — analyzes business model, revenue, market positioning.
+- **Product Analyst** — analyzes features, UX, product-market fit.
+- **Data/Research Support** — gathers supporting data, secondary research.
+- **Writer/Editor** — compiles the final narrative so it's easy to read.
 
-### 4. Pilih & Validasi Topik Case Study
-- Buat daftar kandidat perusahaan/produk yang menarik untuk dibedah.
-- Prioritaskan berdasarkan: ketersediaan data publik, relevansi industri, tingkat kompleksitas.
-- Validasi dengan tim: apakah topik ini cukup kaya untuk dianalisis dari banyak perspektif?
+> For a small team, one person may take on multiple roles.
 
-### 5. Kumpulkan Data & Riset
-- Sumber: laporan tahunan, artikel berita, wawancara (jika memungkinkan), data publik (app store reviews, social listening, dsb).
-- Catat semua sumber untuk menjaga kredibilitas dan menghindari klaim yang tidak terverifikasi.
-- Simpan riset mentah di folder `/research/{nama-case}/`.
+### 3. Build an Analysis Framework
+Establish a standard framework so every case study stays consistent, for example a combination of:
+- **Business Model Canvas** — to understand the business model as a whole.
+- **SWOT / Porter's Five Forces** — for competitive and strategic analysis.
+- **Jobs to be Done (JTBD)** — to understand user motivation.
+- **RICE / ICE Scoring** — to prioritize recommendations.
+- **North Star Metric & AARRR (Pirate Metrics)** — for a growth/product perspective.
 
-### 6. Lakukan Analisis Multi-Perspektif
-Setiap case study sebaiknya dianalisis minimal dari 3 sudut pandang, misalnya:
-- **Perspektif Bisnis**: model revenue, unit economics, positioning pasar.
-- **Perspektif Produk**: fitur utama, user flow, diferensiasi.
-- **Perspektif Pengguna**: pain point, motivasi, hambatan adopsi.
-- **Perspektif Kompetitif**: bagaimana posisi terhadap pesaing.
+Document this framework in a separate file (`/framework.md`) so all team members use the same standard.
 
-### 7. Rumuskan Insight & Rekomendasi
-- Insight harus spesifik dan didukung data, bukan opini umum.
-- Setiap insight idealnya diikuti rekomendasi aksi yang jelas: *"Karena X, tim produk sebaiknya melakukan Y untuk mencapai Z."*
-- Gunakan prioritization framework (RICE/ICE) untuk mengurutkan rekomendasi mana yang paling berdampak.
+### 4. Select & Validate the Case Study Topic
+- Create a list of candidate companies/products worth dissecting.
+- Prioritize based on: availability of public data, industry relevance, level of complexity.
+- Validate with the team: is this topic rich enough to be analyzed from many perspectives?
 
-### 8. Dokumentasikan dalam Format Standar
-Buat template case study, misalnya:
+### 5. Collect Data & Research
+- Sources: annual reports, news articles, interviews (if possible), public data (app store reviews, social listening, etc.).
+- Record all sources to maintain credibility and avoid unverified claims.
+- Store raw research in the `/research/{case-name}/` folder.
+
+### 6. Perform Multi-Perspective Analysis
+Each case study should be analyzed from at least 3 perspectives, for example:
+- **Business Perspective**: revenue model, unit economics, market positioning.
+- **Product Perspective**: key features, user flow, differentiation.
+- **User Perspective**: pain points, motivation, adoption barriers.
+- **Competitive Perspective**: positioning relative to competitors.
+
+### 7. Formulate Insights & Recommendations
+- Insights must be specific and data-backed, not general opinions.
+- Each insight should ideally be followed by a clear action recommendation: *"Because of X, the product team should do Y to achieve Z."*
+- Use a prioritization framework (RICE/ICE) to rank which recommendations would have the most impact.
+
+### 8. Document in a Standard Format
+Create a case study template, for example:
 ```
-1. Ringkasan Eksekutif
-2. Latar Belakang Perusahaan/Produk
-3. Masalah/Tantangan yang Dibahas
-4. Analisis (per perspektif)
-5. Temuan Kunci (Key Insights)
-6. Rekomendasi Strategis
-7. Referensi/Sumber Data
+1. Executive Summary
+2. Company/Product Background
+3. Problem/Challenge Discussed
+4. Analysis (per perspective)
+5. Key Insights
+6. Strategic Recommendations
+7. References/Data Sources
 ```
-Simpan template ini di `/templates/case-study-template.md`.
+Store this template in `/templates/case-study-template.md`.
 
-### 9. Review & Diskusi Tim
-- Lakukan sesi review internal sebelum publikasi — cek validitas argumen, bukan hanya kerapian tulisan.
-- Undang perspektif "devil's advocate" untuk menguji ketahanan rekomendasi.
+### 9. Team Review & Discussion
+- Hold an internal review session before publishing — check the validity of the arguments, not just the writing quality.
+- Invite a "devil's advocate" perspective to test how well the recommendations hold up.
 
-### 10. Publikasikan & Kumpulkan Feedback
-- Publikasikan case study (blog internal, Notion, Medium, atau repo ini).
-- Minta feedback dari luar tim untuk menguji apakah insight benar-benar actionable.
-- Update case study jika ada data baru yang relevan.
+### 10. Publish & Gather Feedback
+- Publish the case study (internal blog, Notion, Medium, or this repo).
+- Ask for feedback from outside the team to test whether the insights are truly actionable.
+- Update the case study if new relevant data emerges.
 
-### 11. Bangun Ritme & Kadensa Tim
-- Tentukan target output (misalnya 1 case study per 2 minggu).
-- Retrospektif berkala: apa yang bisa diperbaiki dari proses analisis atau kolaborasi tim.
+### 11. Build Team Rhythm & Cadence
+- Set an output target (e.g., 1 case study every 2 weeks).
+- Hold regular retrospectives: what can be improved in the analysis process or team collaboration.
 
 ---
