@@ -70,7 +70,7 @@ To load this dataset into a database and practice real queries, run PostgreSQL l
 |---|---|---|
 | Data Engineer | Joseph | Set up GitHub, Docker, Supabase, PostgreSQL; ETL query pipeline; large-scale data cleaning & transformation; data modeling (database schema) |
 | Data Analyst | Niko | EDA & business analysis, KPI/metric definitions, reporting queries for dashboards, Tableau dashboards (calculated fields/LOD), business insights & recommendations, data validation, forecast result interpretation |
-| Forecast Support | Joseph + Bayu | Feature engineering, forecast model training & tuning |
+| Forecast Support | Joseph | Feature engineering, forecast model training & tuning |
 | UI/UX Frontend | Ferly | Wireframes & design in Figma, frontend implementation (React/Next.js) |
 | Backend | Brian | API endpoints (auth, database connection, general website features) |
 | Backend – ML/Forecast | Bayu | FastAPI to serve the forecast model, forecast integration into the website, assist with model training alongside Joseph |
